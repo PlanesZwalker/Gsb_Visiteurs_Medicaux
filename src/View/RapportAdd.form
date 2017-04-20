@@ -40,25 +40,36 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="d_rapport" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="660" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="c_praticien" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="T_motif" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="b_valider" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="B_ajouter_rapport" min="-2" pref="227" max="-2" attributes="0"/>
-                          </Group>
                           <Component id="b_annuler" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="label_ajouter_echantillon" max="32767" attributes="0"/>
+                                  <Component id="jLabel2" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="B_ajouter_echantillon_" min="-2" pref="227" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="button_ok" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="label_attention" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,7 +82,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="L_praticien" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="B_ajouter_rapport" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="B_ajouter_echantillon_" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="c_praticien" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -79,22 +90,41 @@
                   <Component id="L_date" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="d_rapport" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="T_motif" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="L_motif" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
-                  <Component id="L_bilan" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="T_motif" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_motif" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ajouter_echantillon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="button_ok" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="L_bilan" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="b_valider" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="b_annuler" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Component id="label_attention" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="b_valider" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="b_annuler" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="60" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -161,6 +191,7 @@
     <Component class="javax.swing.JButton" name="b_valider">
       <Properties>
         <Property name="text" type="java.lang.String" value="VALIDER"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_validerMouseClicked"/>
@@ -171,13 +202,12 @@
         <Property name="text" type="java.lang.String" value="Ajouter un &#xe9;chantillon : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="B_ajouter_rapport">
+    <Component class="javax.swing.JButton" name="B_ajouter_echantillon_">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ajouter"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ajouter_rapportMouseClicked"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_ajouter_rapportActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ajouter_echantillon_MouseClicked"/>
       </Events>
     </Component>
     <Component class="org.jdesktop.swingx.JXDatePicker" name="d_rapport">
@@ -190,5 +220,38 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_annulerMouseClicked"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JLabel" name="label_ajouter_echantillon">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ajouter  de nouveau un &#xe9;chantillon ? :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="button_ok">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ok"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_okActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="label_attention">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ATTENTION annule le pr&#xe9;c&#xe9;dent &#xe9;chantillon"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
   </SubComponents>
 </Form>

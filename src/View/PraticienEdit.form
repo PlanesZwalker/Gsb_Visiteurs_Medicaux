@@ -22,73 +22,69 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jComboBox1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="LabPrenom" min="-2" pref="94" max="-2" attributes="0"/>
-                                  <Component id="LabNom" min="-2" pref="94" max="-2" attributes="0"/>
-                                  <Component id="LabAdresse" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                                  <Component id="LabVille" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="p_nom" min="-2" pref="182" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="p_adresse" min="-2" pref="182" max="-2" attributes="0"/>
-                                          <Component id="p_prenom" min="-2" pref="182" max="-2" attributes="0"/>
-                                          <Component id="p_ville" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="LabTel" max="32767" attributes="0"/>
-                          <Component id="LabCp" max="32767" attributes="0"/>
-                          <Component id="LabSecteur" min="-2" pref="120" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="p_codepostal" max="32767" attributes="0"/>
-                          <Component id="p_telephone" max="32767" attributes="0"/>
-                          <Component id="p_secteur" alignment="1" min="-2" pref="183" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="146" max="32767" attributes="0"/>
-                  </Group>
+              <Component id="EnregistrerBTN" min="-2" pref="272" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <Component id="SupprimerBTN" min="-2" pref="274" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jComboBox1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="LabPrenom" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="LabNom" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="LabAdresse" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="LabVille" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="LabNom1" min="-2" pref="155" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
-                              <Component id="LabModifP" min="-2" pref="363" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="p_nom" min="-2" pref="182" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="EnregistrerBTN" min="-2" pref="272" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="SupprimerBTN" min="-2" pref="274" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="p_adresse" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Component id="p_prenom" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Component id="p_ville" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="LabTel" pref="120" max="32767" attributes="0"/>
+                  <Component id="LabCp" max="32767" attributes="0"/>
+                  <Component id="LabSecteur" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="p_codepostal" pref="183" max="32767" attributes="0"/>
+                  <Component id="p_telephone" max="32767" attributes="0"/>
+                  <Component id="p_secteur" alignment="1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="LabNom1" min="-2" pref="155" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="LabModifP" min="-2" pref="363" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="LabModifP" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              <Component id="LabNom1" min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="LabModifP" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabNom1" min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -117,7 +113,7 @@
                   <Component id="p_ville" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="LabVille" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="EnregistrerBTN" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="SupprimerBTN" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>

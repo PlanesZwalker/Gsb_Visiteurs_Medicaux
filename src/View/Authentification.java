@@ -221,6 +221,7 @@ public class Authentification extends javax.swing.JFrame {
                             this.AjoutUtilisateurBTN.setEnabled(true);
                             this.ModifUtilisateurBTN.setEnabled(true);
                             this.UserList.setEnabled(true);
+                           
                             break;
 
                         case 3:
@@ -256,7 +257,7 @@ public class Authentification extends javax.swing.JFrame {
     }//GEN-LAST:event_UserListActionPerformed
 
     private void ModifUtilisateurBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifUtilisateurBTNActionPerformed
-        UtilisateurModif viewModifUtilisateur = new UtilisateurModif();
+        UtilisateurEdit viewModifUtilisateur = new UtilisateurEdit();
         viewModifUtilisateur.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ModifUtilisateurBTNActionPerformed

@@ -25,9 +25,10 @@ public class PraticienEdit extends javax.swing.JFrame {
      */
     public PraticienEdit() {
         initComponents();
-
+        
         Show_Combo_Praticien();
-
+        
+        
     }
 
     /**
@@ -134,56 +135,55 @@ public class PraticienEdit extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(EnregistrerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(SupprimerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 37, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(LabPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LabNom, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LabAdresse, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LabVille, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(p_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(p_adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(p_prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(p_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LabTel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LabCp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LabSecteur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p_codepostal)
-                            .addComponent(p_telephone)
-                            .addComponent(p_secteur, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(146, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                            .addComponent(LabPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabNom, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabAdresse, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabVille, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(LabNom1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(188, 188, 188)
-                                .addComponent(LabModifP, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(EnregistrerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)
-                                .addComponent(SupprimerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addGap(18, 18, 18)
+                                .addComponent(p_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(p_adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p_prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(LabTel, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                    .addComponent(LabCp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabSecteur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(p_codepostal, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                    .addComponent(p_telephone)
+                    .addComponent(p_secteur, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LabNom1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabModifP, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(LabModifP)
-                .addGap(13, 13, 13)
-                .addComponent(LabNom1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LabModifP)
+                    .addComponent(LabNom1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
@@ -208,7 +208,7 @@ public class PraticienEdit extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p_ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabVille))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EnregistrerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SupprimerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -224,7 +224,7 @@ public class PraticienEdit extends javax.swing.JFrame {
 
     private void EnregistrerBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnregistrerBTNActionPerformed
         String NomPrenom = jComboBox1.getSelectedItem().toString();
-
+        
         String nom = p_nom.getText();
         String prenom = p_prenom.getText();
         String adresse = p_adresse.getText();
@@ -232,12 +232,12 @@ public class PraticienEdit extends javax.swing.JFrame {
         String code_postal = p_codepostal.getText();
         String telephone = p_telephone.getText();
         String secteur = p_secteur.getText();
-
+        
         PraticienController monPraticien = new PraticienController();
-        monPraticien.EditPraticien(NomPrenom, nom, prenom, adresse, ville, code_postal, telephone, secteur);
-
+        monPraticien.EditPraticien(NomPrenom,nom, prenom, adresse, ville, code_postal, telephone, secteur);
+        
         this.setVisible(false);
-
+        
     }//GEN-LAST:event_EnregistrerBTNActionPerformed
 
     private void p_adresseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p_adresseActionPerformed
@@ -251,31 +251,32 @@ public class PraticienEdit extends javax.swing.JFrame {
     private void SupprimerBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SupprimerBTNActionPerformed
         String praticienSelect = jComboBox1.getSelectedItem().toString();
         PraticienController monPraticien = new PraticienController();
-
+       
         monPraticien.DeletePraticien(praticienSelect);
         this.setVisible(false);
-
+        
     }//GEN-LAST:event_SupprimerBTNActionPerformed
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
 
         /*
         sélection de l'utilisateur via le nom-prenom du visiteur
-         */
+        */
         String praticienSelect = jComboBox1.getSelectedItem().toString();
-
+        
+        
         PraticienController monPraticien = new PraticienController();
         Praticien monSelectPraticien = new Praticien();
-
-        monSelectPraticien = monPraticien.selectPraticienByNom(praticienSelect);
-
-        p_nom.setText(monSelectPraticien.getNom());
-        p_prenom.setText(monSelectPraticien.getPrenom());
-        p_adresse.setText(monSelectPraticien.getAdresse());
-        p_ville.setText(monSelectPraticien.getVille());
-        p_codepostal.setText(monSelectPraticien.getCode_postal());
-        p_telephone.setText(monSelectPraticien.getTelephone());
-        p_secteur.setText(monSelectPraticien.getSecteur());
+         
+        monSelectPraticien = monPraticien.selectPraticienByNom(praticienSelect);   
+            
+            p_nom.setText(monSelectPraticien.getNom());
+            p_prenom.setText(monSelectPraticien.getPrenom());
+            p_adresse.setText(monSelectPraticien.getAdresse());
+            p_ville.setText(monSelectPraticien.getVille());
+            p_codepostal.setText(monSelectPraticien.getCode_postal());
+            p_telephone.setText(monSelectPraticien.getTelephone());
+            p_secteur.setText(monSelectPraticien.getSecteur());
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**
@@ -315,20 +316,25 @@ public class PraticienEdit extends javax.swing.JFrame {
             }
         });
     }
-
-    public void Show_Combo_Praticien() {
-        try {
+    
+     public void Show_Combo_Praticien()
+    {
+        try 
+        { 
             Connection connection = MysqlConnection.ConnectDB();
             Statement st = connection.createStatement();
             String query = "SELECT * FROM praticien ";
             ResultSet rs = st.executeQuery(query);
 
-            while (rs.next()) {
-                String name = rs.getString("nom");
-                jComboBox1.addItem(name);
-            }
+            while(rs.next())
+            {      
+               String name = rs.getString("nom");
+               jComboBox1.addItem(name);             
+            } 
             connection.close();
-        } catch (Exception e) {
+        } 
+        catch (Exception e) 
+        {
             e.printStackTrace();
         }
     }

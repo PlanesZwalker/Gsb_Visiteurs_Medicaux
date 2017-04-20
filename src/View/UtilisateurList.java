@@ -50,6 +50,7 @@ public class UtilisateurList extends javax.swing.JFrame {
         setLocation(new java.awt.Point(300, 300));
 
         listeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Login", "Email", "Nom", "Prénom", "Adresse", "Ville", "Secteur", "Laboratoire" }));
+        listeComboBox.setEnabled(false);
         listeComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 listeComboBoxItemStateChanged(evt);
@@ -84,6 +85,7 @@ public class UtilisateurList extends javax.swing.JFrame {
         jLabel1.setText("Liste des Utilisateurs");
 
         recherche.setToolTipText("Rechercher dans la sélection ...");
+        recherche.setEnabled(false);
         recherche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rechercheActionPerformed(evt);

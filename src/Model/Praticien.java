@@ -9,8 +9,8 @@ package Model;
  *
  * @author elise
  */
-public class Praticien {
-
+public class Praticien 
+{
     private int id_praticien;
     private String nom;
     private String prenom;
@@ -19,24 +19,41 @@ public class Praticien {
     private String code_postal;
     private String secteur;
     private String telephone;
-
+    
     /**
      *
      */
-    public Praticien() {
-
+    public Praticien()
+    {
+    
     }
-
+    
+    public Praticien(String nom, String prenom, int id_praticien)
+    {
+       this.nom = nom;
+       this.prenom = prenom; 
+       this.id_praticien = id_praticien;
+    }
+    
+    public Praticien(int id_praticien, String nom, String prenom)
+    {
+       this.id_praticien = id_praticien;
+       this.nom = nom;
+       this.prenom = prenom; 
+    }
+    
     /**
      *
      * @param nom
      * @param prenom
      */
-    public Praticien(String nom, String prenom) {
+    public Praticien(String nom, String prenom)
+    {
         this.nom = nom;
         this.prenom = prenom;
+        
     }
-
+    
     /**
      *
      * @param id_praticien
@@ -48,17 +65,19 @@ public class Praticien {
      * @param secteur
      * @param telephone
      */
-    public Praticien(int id_praticien, String nom, String prenom, String adresse, String ville, String code_postal, String secteur, String telephone) {
+    public Praticien(int id_praticien, String nom,  String prenom, String adresse, String ville, String code_postal, String telephone, String secteur)
+    {
         this.id_praticien = id_praticien;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.ville = ville;
         this.code_postal = code_postal;
-        this.secteur = secteur;
         this.telephone = telephone;
+        this.secteur = secteur;
     }
-
+    
+    
     /**
      *
      * @param nom
@@ -69,7 +88,8 @@ public class Praticien {
      * @param secteur
      * @param telephone
      */
-    public Praticien(String nom, String prenom, String adresse, String ville, String code_postal, String secteur, String telephone) {
+    public Praticien(String nom,  String prenom, String adresse, String ville, String code_postal, String secteur, String telephone)
+    {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
@@ -78,15 +98,33 @@ public class Praticien {
         this.secteur = secteur;
         this.telephone = telephone;
     }
-
+    
+    public Praticien(String nom,  String prenom, String adresse, String ville, String code_postal, String secteur, String telephone, int id_praticien)
+    {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse = adresse;
+        this.ville = ville;
+        this.code_postal = code_postal;
+        this.secteur = secteur;
+        this.telephone = telephone;
+        this.id_praticien = id_praticien;
+    }
+    
     /**
      *
      * @param nom
      */
-    public Praticien(String nom) {
+    public Praticien(String nom)
+    {
         this.nom = nom;
     }
-
+/*
+    public Praticien() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+*/
+   
     /**
      * @return the id_praticien
      */
@@ -198,7 +236,7 @@ public class Praticien {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
-
+    
     /**
      *
      * @return
@@ -206,9 +244,9 @@ public class Praticien {
     public String toString02() {
         return "Praticien{" + "id_praticien=" + id_praticien + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", ville=" + ville + ", code_postal=" + code_postal + " secteur=" + secteur + ", telephone=" + telephone + '}';
     }
-
+    
     @Override
-    public String toString() {
-        return nom + " " + prenom;
+    public String toString(){
+        return nom + " " + prenom ;
     }
 }

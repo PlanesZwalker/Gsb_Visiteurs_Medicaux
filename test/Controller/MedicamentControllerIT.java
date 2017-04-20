@@ -20,21 +20,36 @@ import static org.junit.Assert.*;
  */
 public class MedicamentControllerIT {
     
+    /**
+     *
+     */
     public MedicamentControllerIT() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }
@@ -114,6 +129,7 @@ public class MedicamentControllerIT {
 
     /**
      * Test of showDenominationById method, of class MedicamentController.
+     * @throws java.lang.Exception
      */
     @Test
     public void testShowDenominationById() throws Exception {

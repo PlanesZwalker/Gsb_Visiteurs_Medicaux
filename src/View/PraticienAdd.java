@@ -6,6 +6,7 @@
 package View;
 
 import Controller.PraticienController;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -37,13 +38,13 @@ public class PraticienAdd extends javax.swing.JFrame {
         LabCp = new javax.swing.JLabel();
         LabTel = new javax.swing.JLabel();
         LabSecteur = new javax.swing.JLabel();
-        NomTxt = new javax.swing.JTextField();
-        PrenomTxt = new javax.swing.JTextField();
-        AdresseTxt = new javax.swing.JTextField();
-        VilleTxt = new javax.swing.JTextField();
-        CpTxt = new javax.swing.JTextField();
-        TelTxt = new javax.swing.JTextField();
-        SecteurTxt = new javax.swing.JTextField();
+        nom = new javax.swing.JTextField();
+        prenom = new javax.swing.JTextField();
+        adresse = new javax.swing.JTextField();
+        ville = new javax.swing.JTextField();
+        code_postal = new javax.swing.JTextField();
+        telephone = new javax.swing.JTextField();
+        secteur = new javax.swing.JTextField();
         AjouterBtn = new javax.swing.JButton();
 
         setLocation(new java.awt.Point(300, 300));
@@ -89,13 +90,13 @@ public class PraticienAdd extends javax.swing.JFrame {
                             .addComponent(LabCp, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NomTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PrenomTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AdresseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TelTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SecteurTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(VilleTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telephone, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(secteur, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(code_postal, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ville, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -112,31 +113,31 @@ public class PraticienAdd extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabNom)
-                    .addComponent(NomTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabPrenom)
-                    .addComponent(PrenomTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabAdresse)
-                    .addComponent(AdresseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(adresse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabVille)
-                    .addComponent(VilleTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabCp)
-                    .addComponent(CpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(code_postal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabTel)
-                    .addComponent(TelTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(telephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabSecteur)
-                    .addComponent(SecteurTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(secteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(AjouterBtn)
                 .addGap(47, 47, 47))
@@ -148,7 +149,35 @@ public class PraticienAdd extends javax.swing.JFrame {
     private void AjouterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjouterBtnActionPerformed
         // TODO add your handling code here:
         PraticienController unNewPraticien = new PraticienController();
-        unNewPraticien.AjoutPraticien(NomTxt.getText(), PrenomTxt.getText(), AdresseTxt.getText(), VilleTxt.getText(), CpTxt.getText(), TelTxt.getText(), SecteurTxt.getText());
+        boolean validPraticien;
+        
+        String lenom=  nom.getText();
+        String leprenom = prenom.getText();
+        String ladresse = adresse.getText();
+        String laville=  ville.getText();
+        String lecode_postal = code_postal.getText();
+        String letelephone = telephone.getText();
+        String lesecteur = secteur.getText();
+        
+        validPraticien = unNewPraticien.isValidPraticien(lenom, leprenom, ladresse, laville, lecode_postal, letelephone, lesecteur);
+        
+        if(validPraticien==true){
+            String nomP=  nom.getText();
+            String prenomP = prenom.getText();
+            String adresseP = adresse.getText();
+            String villeP=  ville.getText();
+            String code_postalP = code_postal.getText();
+            String telephoneP = telephone.getText();
+            String secteurP = secteur.getText();
+            
+            unNewPraticien.AjoutPraticien(lenom, leprenom, ladresse, laville, lecode_postal, letelephone, lesecteur);
+            this.setVisible(false);
+        }
+        else{  
+            JOptionPane.showMessageDialog(null,"Probleme avec l'ajout de l'utilisateur !", "Accès refusé", JOptionPane.ERROR_MESSAGE);
+        }
+        //unNewPraticien.AjoutPraticien(nom.getText(), prenom.getText(), adresse.getText(),ville.getText(), code_postal.getText(), telephone.getText(), secteur.getText());
+        
     }//GEN-LAST:event_AjouterBtnActionPerformed
 
     /**
@@ -188,9 +217,7 @@ public class PraticienAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField AdresseTxt;
     private javax.swing.JButton AjouterBtn;
-    private javax.swing.JTextField CpTxt;
     private javax.swing.JLabel LabAdresse;
     private javax.swing.JLabel LabCp;
     private javax.swing.JLabel LabNom;
@@ -198,11 +225,13 @@ public class PraticienAdd extends javax.swing.JFrame {
     private javax.swing.JLabel LabSecteur;
     private javax.swing.JLabel LabTel;
     private javax.swing.JLabel LabVille;
-    private javax.swing.JTextField NomTxt;
-    private javax.swing.JTextField PrenomTxt;
-    private javax.swing.JTextField SecteurTxt;
-    private javax.swing.JTextField TelTxt;
-    private javax.swing.JTextField VilleTxt;
+    private javax.swing.JTextField adresse;
+    private javax.swing.JTextField code_postal;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField nom;
+    private javax.swing.JTextField prenom;
+    private javax.swing.JTextField secteur;
+    private javax.swing.JTextField telephone;
+    private javax.swing.JTextField ville;
     // End of variables declaration//GEN-END:variables
 }

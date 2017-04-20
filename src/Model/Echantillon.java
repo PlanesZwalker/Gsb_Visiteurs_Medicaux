@@ -9,26 +9,28 @@ package Model;
  *
  * @author elise
  */
-public class Echantillon {
-
+public class Echantillon 
+{
     private int id_echantillon;
     private String ref_echantillon;
-
+  
     /**
      *
      */
-    public Echantillon() {
-
+    public Echantillon()
+    {
+        
     }
-
+    
     /**
      *
      * @param ref_echantillon
      */
-    public Echantillon(String ref_echantillon) {
-
+    public Echantillon(String ref_echantillon){
+     
         this.ref_echantillon = ref_echantillon;
     }
+
 
     /**
      * @return the id_echantillon
@@ -58,4 +60,5 @@ public class Echantillon {
         this.ref_echantillon = ref_echantillon;
     }
 
+  
 }

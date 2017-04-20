@@ -400,6 +400,7 @@ public class UtilisateurDAO extends Utilisateur {
 
             String queryUtilisateur = "UPDATE utilisateur SET login=? ,password=?, email=?, id_role=? WHERE id_utilisateur = ?";
 
+            
             try {
                 pst = connection.prepareStatement(queryUtilisateur);
                 pst.setString(1, login);

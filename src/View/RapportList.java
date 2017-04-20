@@ -11,19 +11,22 @@ import Model.Praticien;
 import Controller.PraticienController;
 import Model.Echantillon;
 import Controller.EchantillonController;
-import Model.Visiteurmedical;
+
 import Controller.VisiteurController;
+import Model.Visiteurmedical;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author passpass
+ * @author Gaël Bernaténé et passpass
  */
 public class RapportList extends javax.swing.JFrame {
 
@@ -33,7 +36,7 @@ public class RapportList extends javax.swing.JFrame {
     public RapportList() throws SQLException {
         initComponents();
         Show_RapportdevisiteList_In_JTable();
-
+    
     }
 
     /**
@@ -48,8 +51,6 @@ public class RapportList extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         visiTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
 
         setLocation(new java.awt.Point(200, 200));
 
@@ -75,112 +76,86 @@ public class RapportList extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("Liste des Rapports de visites");
 
-        jTextField1.setText("Rechercher dans la sélection ...");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(16, 16, 16)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1097, Short.MAX_VALUE)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1101, Short.MAX_VALUE)
                 .addContainerGap())
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .add(383, 383, 383)
                 .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 348, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 262, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 262, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(48, 48, 48))
+                .add(48, 392, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(18, 18, 18)
-                        .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(104, 104, 104))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(52, 52, 52)))
+                .add(18, 18, 18)
+                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(104, 104, 104)
                 .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 616, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     /**
-     *
+     * 
+     * @throws SQLException 
      */
     public void Show_RapportdevisiteList_In_JTable() throws SQLException {
 
         // on recupere les listes de tous les rapports de visites
-        RapportController mesRapports = new RapportController();
-        ArrayList<Rapportdevisite> list = mesRapports.getRapportdevisiteList();
-
+        RapportController mesRapports =new RapportController();
+        VisiteurController mesVisiteursC = new VisiteurController();
+        PraticienController mesPraticiensC = new PraticienController();
+        EchantillonController monEchantillonC = new EchantillonController();   
+        
         DefaultTableModel model = (DefaultTableModel) visiTable.getModel();
-        Object[] row = new Object[6];
-
+        ArrayList<Rapportdevisite> list = mesRapports.getRapportdevisiteList();
+        
         int nbRapport = list.size();
-
+        
+        Object[] row = new Object[6];
         Object[] rowP = new Object[nbRapport];
-        Object[] rowV = new Object[nbRapport];
-        Object[] rowE = new Object[nbRapport];
+       
 
-        Praticien nomPraticien = new Praticien();
-        Visiteurmedical nomVisiteur = new Visiteurmedical();
+        Visiteurmedical visiteur = new Visiteurmedical();
+        Praticien nomPraticien = new Praticien();        
         Echantillon refEchantillon = new Echantillon();
-
-        for (int i = 0; i < nbRapport; i++) {
+        String NomPrenomV = null;
+        String NomPrenomP = null;
+        
+        for (int i = 0; i < nbRapport; i++) {           
 
             // on recupere le nom et le prenom du visiteur medical
-            rowV[i] = list.get(i).getIdvisiteur();
-            VisiteurController mesVisiteurs = new VisiteurController();
-            nomVisiteur = mesVisiteurs.getNomPrenomVisiteur(rowV[i]);
-            row[0] = nomVisiteur.getNom() + " " + nomVisiteur.getPrenom();
-
+            NomPrenomV = mesVisiteursC.findNomPrenomVisiteurByIdVisiteur(list.get(i).getIdvisiteur());
+            row[0] = NomPrenomV;
             // date de la visite
             row[1] = list.get(i).getDate_visite();
-
-            // on recupere le nom et le prenom des praticiens
-            rowP[i] = list.get(i).getIdpraticien();
-            PraticienController mesPraticiens = new PraticienController();
-            nomPraticien = mesPraticiens.getNomPrenomPraticien(rowP[i]);
-            row[2] = nomPraticien.getNom() + " " + nomPraticien.getPrenom();
-
+                
+             // on recupere le nom et le prenom des praticiens
+            NomPrenomP = mesPraticiensC.getNomPrenomPraticienById(list.get(i).getIdpraticien());
+            row[2] = NomPrenomP;
+            
             // motif de la visite
             row[3] = list.get(i).getMotifvisite();
-
+            
             // Compte rendu
             row[4] = list.get(i).getBilan();
-
-            // reference de l'echantillon
-            rowE[i] = list.get(i).getIdechantillon();
-            EchantillonController monEchantillon = new EchantillonController();
-            refEchantillon = monEchantillon.getRef_Echantillon(rowE[i]);
+            
+             // reference de l'echantillon
+            refEchantillon = monEchantillonC.getRef_Echantillon(list.get(i).getIdechantillon());
             row[5] = refEchantillon.getRef_echantillon();
 
             model.addRow(row);
         }
+      
     }
-
+    
     /**
      * @param args the command line arguments
      */
@@ -210,6 +185,10 @@ public class RapportList extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -223,11 +202,10 @@ public class RapportList extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable visiTable;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,21 +20,36 @@ import static org.junit.Assert.*;
  */
 public class RapportControllerIT {
     
+    /**
+     *
+     */
     public RapportControllerIT() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }
@@ -69,6 +84,7 @@ public class RapportControllerIT {
 
     /**
      * Test of insertId method, of class RapportController.
+     * @throws java.lang.Exception
      */
     @Test
     public void testInsertId() throws Exception {
@@ -83,6 +99,7 @@ public class RapportControllerIT {
 
     /**
      * Test of getVisiteurId method, of class RapportController.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetVisiteurId() throws Exception {

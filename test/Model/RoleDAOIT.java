@@ -18,21 +18,36 @@ import static org.junit.Assert.*;
  */
 public class RoleDAOIT {
     
+    /**
+     *
+     */
     public RoleDAOIT() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }

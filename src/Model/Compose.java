@@ -9,26 +9,29 @@ package Model;
  *
  * @author elise
  */
-public class Compose {
-
+public class Compose 
+{
     private int quantite;
     private int id_medicament;
     private int id_echantillon;
 
-    public Compose() {
-
+    public Compose()
+    {
+        
     }
-
-    public Compose(int quantite) {
+    
+    public Compose(int quantite)
+    {
         this.quantite = quantite;
     }
-
-    public Compose(int quantite, int id_medicament, int id_echantillon) {
+    
+    public Compose(int quantite, int id_medicament, int id_echantillon)
+    {
         this.quantite = quantite;
         this.id_medicament = id_medicament;
         this.id_echantillon = id_echantillon;
     }
-
+    
     /**
      * @return the quantite
      */

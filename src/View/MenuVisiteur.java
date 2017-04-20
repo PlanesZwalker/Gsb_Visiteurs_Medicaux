@@ -1,25 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package View;
 
-import Controller.MysqlConnection;
 import Controller.RapportController;
 import Controller.VisiteurController;
 import Controller.UtilisateurController;
 
-import Model.Visiteurmedical;
-import Model.Utilisateur;
-import Model.Visiteurmedical;
-import javax.swing.JOptionPane;
-import View.Authentification;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,11 +43,14 @@ public class MenuVisiteur extends javax.swing.JFrame {
         int role = monUtilisateurC.isAdmin(id_utilisateur);
         // JOptionPane.showMessageDialog(null, role);
 
+        this.id_utilisateur = id_utilisateur;
+               
         initComponents();
         jLabel10.setText(monVisiteur);
 
         if (role == 2) {
             this.admin.setEnabled(true);
+            this.AjoutRapport.setEnabled(false);
             admin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/enabled.png")));
         }
     }
@@ -359,12 +349,12 @@ public class MenuVisiteur extends javax.swing.JFrame {
     }//GEN-LAST:event_AjoutRapportMouseClicked
 
     private void b_praticienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_praticienActionPerformed
-        PraticienView p = new PraticienView();
+        PraticienList p = new PraticienList();
         p.setVisible(true);
     }//GEN-LAST:event_b_praticienActionPerformed
 
     private void go_medicamentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_go_medicamentActionPerformed
-        MedicamentView m = new MedicamentView();
+        MedicamentList m = new MedicamentList();
         m.setVisible(true);
     }//GEN-LAST:event_go_medicamentActionPerformed
 

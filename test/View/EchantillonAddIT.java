@@ -18,21 +18,36 @@ import static org.junit.Assert.*;
  */
 public class EchantillonAddIT {
     
+    /**
+     *
+     */
     public EchantillonAddIT() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }
@@ -51,6 +66,7 @@ public class EchantillonAddIT {
 
     /**
      * Test of Show_Compose_In_JTable method, of class EchantillonAdd.
+     * @throws java.lang.Exception
      */
     @Test
     public void testShow_Compose_In_JTable() throws Exception {
@@ -63,6 +79,7 @@ public class EchantillonAddIT {
 
     /**
      * Test of executeSQlQuery method, of class EchantillonAdd.
+     * @throws java.lang.Exception
      */
     @Test
     public void testExecuteSQlQuery() throws Exception {

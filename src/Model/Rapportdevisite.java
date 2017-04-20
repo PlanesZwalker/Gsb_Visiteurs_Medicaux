@@ -5,6 +5,7 @@
  */
 package Model;
 
+
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 
@@ -16,22 +17,23 @@ import java.util.Date;
  */
 public class Rapportdevisite implements Serializable {
 
+    
     private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
 
     private static final long serialVersionUID = 1L;
-
+   
     private Integer id_rapport;
-
+  
     private String bilan;
-
+  
     private Date date_visite;
-
+  
     private String motifvisite;
-
+   
     private Integer id_echantillon;
-
+   
     private Integer id_praticien;
-
+  
     private Integer id_visiteur;
 
     /**
@@ -43,14 +45,14 @@ public class Rapportdevisite implements Serializable {
      * @param id_praticien
      * @param id_visiteur
      */
-    public Rapportdevisite(String bilan, String motifvisite, Date date_visite, int id_echantillon, int id_praticien, int id_visiteur) {
-
+    public Rapportdevisite(String bilan, String motifvisite, Date date_visite, int id_visiteur, int id_praticien, int id_echantillon){
+      
         this.bilan = bilan;
         this.motifvisite = motifvisite;
         this.date_visite = date_visite;
         this.id_praticien = id_praticien;
-        this.id_echantillon = id_echantillon;
         this.id_visiteur = id_visiteur;
+        this.id_echantillon = id_echantillon;  
     }
 
     /**
@@ -170,17 +172,23 @@ public class Rapportdevisite implements Serializable {
     }
 
     /**
-     * @return the id_visiteur
+     *
+     * @return
      */
     public Integer getIdvisiteur() {
         return id_visiteur;
     }
 
     /**
-     * @param id_visiteur the id_visiteur to set
+     *
+     * @param id_visiteur
      */
-    public void setId_visiteur(Integer id_visiteur) {
+    public void setIdvisiteur(Integer id_visiteur) {
+        Integer oldIdvisiteur = this.id_visiteur;
         this.id_visiteur = id_visiteur;
+        changeSupport.firePropertyChange("id_visiteur", oldIdvisiteur, id_visiteur);
     }
 
+
+    
 }

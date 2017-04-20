@@ -288,6 +288,45 @@ public class VisiteurDAO extends Visiteurmedical {
         }
         return isModifOk;
     }
+    /**
+     * @param id_visiteur
+     * @param nom
+     * @param prenom
+     * @param adresse
+     * @param ville
+     * @param secteur
+     * @param labo
+     * @param id_utilisateur
+     * @return boolean
+     *
+     */
+    public boolean editAdminVisiteur(int id_utilisateur) {
+
+        boolean isModifOk = false;
+
+        Connection connection = MysqlConnection.ConnectDB();
+        PreparedStatement pstUpdate;
+        String queryUtilisateurUpdate;
+
+        queryUtilisateurUpdate = "UPDATE visiteurmedical SET id_utilisateur=? WHERE id_utilisateur=?";
+
+        /*
+        *   Mis à jour du profil visiteur
+         */
+        try {
+
+            pstUpdate = connection.prepareStatement(queryUtilisateurUpdate);
+            pstUpdate.setNull(1,id_utilisateur);
+            pstUpdate.setInt(2, id_utilisateur);
+            pstUpdate.execute();
+
+            isModifOk = true;
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Enregistrement visiteur échoué !", "Accès refusé", JOptionPane.ERROR_MESSAGE);
+        }
+        return isModifOk;
+    }
 
     /**
      * @param String

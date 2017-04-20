@@ -40,13 +40,13 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="NomTxt" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="PrenomTxt" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="AdresseTxt" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="TelTxt" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="SecteurTxt" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="CpTxt" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                          <Component id="VilleTxt" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="nom" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="prenom" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="adresse" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="telephone" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="secteur" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="code_postal" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="ville" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -70,37 +70,37 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="NomTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nom" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabPrenom" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PrenomTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="prenom" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabAdresse" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AdresseTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="adresse" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabVille" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="VilleTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ville" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabCp" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CpTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="code_postal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabTel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TelTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="telephone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="LabSecteur" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="SecteurTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="secteur" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="46" max="32767" attributes="0"/>
               <Component id="AjouterBtn" min="-2" max="-2" attributes="0"/>
@@ -150,19 +150,19 @@
         <Property name="text" type="java.lang.String" value="Secteur :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="NomTxt">
+    <Component class="javax.swing.JTextField" name="nom">
     </Component>
-    <Component class="javax.swing.JTextField" name="PrenomTxt">
+    <Component class="javax.swing.JTextField" name="prenom">
     </Component>
-    <Component class="javax.swing.JTextField" name="AdresseTxt">
+    <Component class="javax.swing.JTextField" name="adresse">
     </Component>
-    <Component class="javax.swing.JTextField" name="VilleTxt">
+    <Component class="javax.swing.JTextField" name="ville">
     </Component>
-    <Component class="javax.swing.JTextField" name="CpTxt">
+    <Component class="javax.swing.JTextField" name="code_postal">
     </Component>
-    <Component class="javax.swing.JTextField" name="TelTxt">
+    <Component class="javax.swing.JTextField" name="telephone">
     </Component>
-    <Component class="javax.swing.JTextField" name="SecteurTxt">
+    <Component class="javax.swing.JTextField" name="secteur">
     </Component>
     <Component class="javax.swing.JButton" name="AjouterBtn">
       <Properties>

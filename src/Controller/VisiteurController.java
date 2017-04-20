@@ -5,16 +5,13 @@
  */
 package Controller;
 
-import Model.Role;
 import Model.Utilisateur;
 import Model.Visiteurmedical;
 import Model.VisiteurDAO;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -89,10 +86,8 @@ public class VisiteurController extends VisiteurDAO {
         /*
         *   getVisiteurListOrderByColumn
         *   findVisiteurById
-         */
- /*
         *   findUserById
-         */
+        */
         UtilisateurController monUtilisateurC;
         VisiteurController monVisiteurC;
         monUtilisateurC = new UtilisateurController();
@@ -113,13 +108,13 @@ public class VisiteurController extends VisiteurDAO {
         Object[] row;
         int id_utilisateur;
         int nbVisiteur;
-        //int i;
-
+        
         row = new Object[9];
         int i;
+        
         /*  
-        *   Recupere la liste trié par la colonne choisie ( champs utilisateur séléctionné )
-         */
+        *   Recupere la liste triée par la colonne choisie ( champs utilisateur séléctionné )
+        */
         list = monVisiteurC.getVisiteurListByTable(maTable);
         nbVisiteur = list.size();
 

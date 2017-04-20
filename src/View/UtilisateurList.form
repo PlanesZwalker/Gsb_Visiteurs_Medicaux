@@ -75,6 +75,7 @@
             <StringItem index="7" value="Laboratoire"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="listeComboBoxItemStateChanged"/>
@@ -176,6 +177,7 @@
     <Component class="javax.swing.JTextField" name="recherche">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Rechercher dans la s&#xe9;lection ..."/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rechercheActionPerformed"/>

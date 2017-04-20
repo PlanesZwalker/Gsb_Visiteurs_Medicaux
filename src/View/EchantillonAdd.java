@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -29,26 +30,26 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author elise
  */
-public class EchantillonAdd extends javax.swing.JFrame {
-
-    PreparedStatement pst = null;
+public class EchantillonAdd extends javax.swing.JFrame 
+{    
+    PreparedStatement pst = null ;
     private int id_medicament;
     private int rapport;
     private final int key;
     public int MYSQL_DUPLICATE_PK;
-
+    
     /**
      * Nouvelle Vue pour créer l'échantillon (EchantillonAdd)
-     *
      * @param key
      * @param rapport
      * @throws SQLException
-     */
-    public EchantillonAdd(int key, int rapport) throws SQLException {
+     */        
+    public EchantillonAdd(int key, int rapport) throws SQLException
+    {
         // key = id de l'echantillon récupérer 
         this.key = key;
         // id du rapport (table rapport)
-        this.rapport = rapport;
+        this.rapport = rapport;    
         initComponents();
         Show_Compose_In_JTable();
         Show_Combo_Medicament();
@@ -77,8 +78,6 @@ public class EchantillonAdd extends javax.swing.JFrame {
         B_valid_echantillon = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table_compose = new javax.swing.JTable();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("                               AJOUTER UN ECHANTILLON");
 
@@ -109,13 +108,13 @@ public class EchantillonAdd extends javax.swing.JFrame {
 
         table_compose.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Dénomination", "Quantité"
             }
         ));
         jScrollPane1.setViewportView(table_compose);
@@ -175,50 +174,58 @@ public class EchantillonAdd extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
+     * Cette fonction Permet d'ajouter l'échantillon dans la
+     * base de données
      * @param evt
-     * @description : Cette fonction Permet d'ajouter l'échantillon dans la base
-     * de données
      */
     private void b_ajouter_echMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_ajouter_echMouseClicked
         // TODO add your handling code here:
-
+        
         int quantite = Integer.parseInt(T_quantite.getText());
         String medicament = (String) c_medicament.getSelectedItem();
-
+        
         // Recupère le medicament en fonction de la denomination 
-        try {
+        try 
+        {
             Connection connection = MysqlConnection.ConnectDB();
             Statement st = connection.createStatement();
-            String query = "SELECT * FROM medicament WHERE denomination = '" + medicament + "'";
+            String query = "SELECT * FROM medicament WHERE denomination = '"+medicament+"'";
             ResultSet rs = st.executeQuery(query);
+            
 
-            while (rs.next()) {
+            while (rs.next())
+            {      
                 id_medicament = rs.getInt("id_medicament");
             }//end while
             connection.close();
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) 
+        {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-
+        
         // Insère les élément dans la table compose
-        try {
+        try 
+        {            
             String query = "INSERT INTO compose(id_medicament, quantite, id_echantillon) VALUES "
-                    + "('" + id_medicament + "','" + quantite + "','" + this.key + "')";
+               + "('"+id_medicament+"','"+quantite+"','"+this.key+"')";
             executeSQlQuery(query, "Ajoutées");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_b_ajouter_echMouseClicked
-
+    
     /**
-     * @param evt
-     * @return Void
-     * @description : Supprime l'échantillon en cours de création et ferme la
+     * Supprime l'échantillon en cours de création et ferme la 
      * Vue en cours (this.setVisible(false)
+     * @param evt
      */
     private void b_annulerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_annulerMouseClicked
         //String key = Integer.toString(this.key);
-        try {
+        try 
+        {
             Connection connection = MysqlConnection.ConnectDB();
             Statement st = connection.createStatement();
             String query = "DELETE FROM echantillon WHERE id_echantillon = " + this.key;
@@ -227,70 +234,85 @@ public class EchantillonAdd extends javax.swing.JFrame {
             {
                 this.setVisible(false);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.getMessage();
         }
-
+            
+            
+            
     }//GEN-LAST:event_b_annulerMouseClicked
-
+    
     /**
-     * @param evt
-     * @return void
-     * @description : Mets a jour l'id_echantillon de la table Rapport de Visite
+     * Mets a jour l'id_echantillon de la table Rapport de Visite
+     * @param evt 
      */
     private void B_valid_echantillonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_valid_echantillonMouseClicked
-
-        try {
+        
+        try
+        {
             Connection connection = MysqlConnection.ConnectDB();
-            String query = "UPDATE rapportdevisite SET id_echantillon = ? WHERE id_rapport = " + this.rapport;
+            String query = "UPDATE rapportdevisite SET id_echantillon = ? WHERE id_rapport = "+this.rapport;
             pst = (PreparedStatement) connection.prepareStatement(query);
             pst.setInt(1, this.key);
             pst.executeUpdate();
             connection.close();
             this.setVisible(false);
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
         }
+        catch (SQLException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+}
     }//GEN-LAST:event_B_valid_echantillonMouseClicked
-
+    
     /**
-     * @return void Permet d'afficher la table Médicament dans une JcomboBox
+     * Permet d'afficher la table Médicament dans une JcomboBox 
      */
-    public void Show_Combo_Medicament() {
-        try {
+    public void Show_Combo_Medicament()
+    {
+        try 
+        {
             Connection connection = MysqlConnection.ConnectDB();
             Statement st = connection.createStatement();
             String query = "SELECT * FROM medicament";
             ResultSet rs = st.executeQuery(query);
 
-            while (rs.next()) {
-
+            while (rs.next())
+            {      
+                
                 c_medicament.addItem(rs.getString("denomination"));
             }//end while
             connection.close();
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) 
+        {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
-
+    
     /**
-     * @return Void Fonction Permettant d'afficher en direct les éléments de la
-     * table Compose
+     * Fonction Permettant d'afficher en direct les éléments de la table
+     * Compose
      */
-    public void Show_Compose_In_JTable() throws SQLException {
+    public void Show_Compose_In_JTable() throws SQLException
+    {
         ComposeController composeController = new ComposeController();
         ArrayList<Compose> list = composeController.getComposeList(this.key);
         DefaultTableModel model = (DefaultTableModel) table_compose.getModel();
         Object[] row = new Object[2];
-
+        
         int nbRapport = list.size();
-
+        
         // Object[] rowP = new Object[nbRapport];
         // Object[] rowV = new Object[nbRapport];
         // Object[] rowE = new Object[nbRapport];
+        
         Medicament nameMedicament = new Medicament();
 
-        for (int i = 0; i < list.size(); i++) {
+        
+        for(int i = 0; i < list.size(); i++)
+        {  
             //On récupère tout d'abord l'id_medicament de la list Compose
             int id_medicament = list.get(i).getId_medicament();
             // On instancie le Controller medicament
@@ -299,39 +321,42 @@ public class EchantillonAdd extends javax.swing.JFrame {
             nameMedicament = myMedicament.showDenominationById(id_medicament);
             row[0] = nameMedicament.getDenomination();
             row[1] = list.get(i).getQuantite();
-
+          
             model.addRow(row);
         }
     }
-
+    
     /**
+     * Permet d'éxecuter la requète SQL et de la transmettre à la 
+     * JTable souhaité. La fonction gère les doublons, 
+     * Un médicament ne peut être dupliqué
      * @param query
      * @param message
      * @throws SQLException
-     * @description Permet d'éxecuter la requète SQL et de la transmettre à la
-     * JTable souhaité. La fonction gère les doublons, Un médicament ne peut
-     * être dupliqué
+     * 
      */
-    public void executeSQlQuery(String query, String message) throws SQLException {
+    public void executeSQlQuery(String query, String message) throws SQLException
+    {
         Connection con = MysqlConnection.ConnectDB();
         Statement st;
-        try {
+        try{
             st = con.createStatement();
-            if ((st.executeUpdate(query)) == 1) {
+            if((st.executeUpdate(query)) == 1)
+            {
                 // refresh jtable data
-                DefaultTableModel model = (DefaultTableModel) table_compose.getModel();
+                DefaultTableModel model = (DefaultTableModel)table_compose.getModel();
                 model.setRowCount(0);
                 Show_Compose_In_JTable();
-
-                JOptionPane.showMessageDialog(null, "Données " + message + " avec Succès");
-            } else {
-                JOptionPane.showMessageDialog(null, "Données impossible à " + message);
+               
+                JOptionPane.showMessageDialog(null, "Données "+message+" avec Succès");
+            }else{
+                JOptionPane.showMessageDialog(null, "Données impossible à "+message);
             }
-        } catch (SQLIntegrityConstraintViolationException ex) {
+        }catch(SQLIntegrityConstraintViolationException ex){
             JOptionPane.showMessageDialog(null, "Médicament déjà ajouté à votre échantillon !!");
-        }
+       }
     }
-
+      
     /**
      * @param args the command line arguments
      */
@@ -357,6 +382,9 @@ public class EchantillonAdd extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EchantillonAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

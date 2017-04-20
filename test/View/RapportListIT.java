@@ -18,27 +18,43 @@ import static org.junit.Assert.*;
  */
 public class RapportListIT {
     
+    /**
+     *
+     */
     public RapportListIT() {
     }
     
+    /**
+     *
+     */
     @BeforeClass
     public static void setUpClass() {
     }
     
+    /**
+     *
+     */
     @AfterClass
     public static void tearDownClass() {
     }
     
+    /**
+     *
+     */
     @Before
     public void setUp() {
     }
     
+    /**
+     *
+     */
     @After
     public void tearDown() {
     }
 
     /**
      * Test of Show_RapportdevisiteList_In_JTable method, of class RapportList.
+     * @throws java.lang.Exception
      */
     @Test
     public void testShow_RapportdevisiteList_In_JTable() throws Exception {
